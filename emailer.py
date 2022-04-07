@@ -42,7 +42,7 @@ msg = EmailMessage()
 
 msg['Subject'] = '🐕'
 msg['From'] = user
-msg['To'] = ['upamanyudas16@gmail.com', to_email, to_email_s]
+msg['To'] = ['maximelangevin5@gmail.com', to_email, to_email_s]
 msg.set_content(message_body)
 msg.add_alternative(html_message, subtype='html')
 
