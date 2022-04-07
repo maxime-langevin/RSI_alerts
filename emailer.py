@@ -34,15 +34,14 @@ html_message = f"""\
 # Google Auth secrets
 user = os.environ.get('EMAIL_USER')
 password = os.environ.get('EMAIL_PASSWORD')
-to_email = os.environ.get('TO_EMAIL')
-to_email_s = os.environ.get('TO_EMAIL_S')
+
 
 # Email content
 msg = EmailMessage()
 
 msg['Subject'] = '🐕'
 msg['From'] = user
-msg['To'] = ['maximelangevin5@gmail.com', to_email, to_email_s]
+msg['To'] = ['maximelangevin5@gmail.com']
 msg.set_content(message_body)
 msg.add_alternative(html_message, subtype='html')
 
