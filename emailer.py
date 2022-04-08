@@ -34,7 +34,8 @@ html_message = f"""\
 # Google Auth secrets
 user = os.environ.get('EMAIL_USER')
 password = os.environ.get('EMAIL_PASSWORD')
-
+print(user)
+print(password)
 
 # Email content
 msg = EmailMessage()
