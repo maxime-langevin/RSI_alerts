@@ -89,6 +89,8 @@ html_message = f"""\
     
     <div> 
         <p style="text-align: center"> CAC40 stocks with RSI below 30. </p>
+    <div>
+    <div> 
         {% for item in interesting_stocks_cac40 %}
           <tr>
             <td>{{item}}</td>
@@ -98,6 +100,8 @@ html_message = f"""\
     
     <div> 
         <p style="text-align: center"> SBF120 stocks with RSI below 30. </p>
+    <div>
+    <div> 
         {% for item in interesting_stocks_SBF120 %}
           <tr>
             <td>{{item}}</td>
