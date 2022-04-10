@@ -66,14 +66,25 @@ for s in stocks_cac40:
 # Fetch dog image
 dog_url = requests.get('https://dog.ceo/api/breeds/image/random').json()['message']
 
+cac40 = "\n Stocks from the CAC40 with below 30 RSI: \n"
+for s in interesting_stocks_cac40:
+    cac40 += s
+    cac40 += '\n'
 
+sbf120 = "Stocks from the SBF120 with below 30 RSI: \n"
+for s in interesting_stocks_SBF120:
+    sbf120 += s
+    sbf120 += '\n'
 # Message to send if HTML is disabled
+
 message_body = f"""\
     🐶 Woof 🐶
     {dog_url}
 
     ❤️ I love you ❤️ 
     """
+message_body += cac40
+message_body += sbf120
 
 # HTML message
 html_message = f"""\
@@ -112,13 +123,13 @@ html_message = f"""\
   </body>
 </html>
     """
+html_message += cac40
+html_message += sbf120
 
 # Google Auth secrets
 user = os.environ.get('EMAIL_USER')
 password = os.environ.get('EMAIL_PASSWORD')
 
-print(user)
-print(password)
 
 # Email content
 msg = EmailMessage()
