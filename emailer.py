@@ -86,7 +86,6 @@ message_body = f"""\
 message_body += cac40
 message_body += sbf120
 
-# HTML message
 html_message = f"""\
     <!DOCTYPE html>
 <html lang="en">
@@ -97,32 +96,11 @@ html_message = f"""\
     <div> 
         <p style="text-align: center"> ❤️ I love you ❤️ </p>
     <div>
-    
-    <div> 
-        <p style="text-align: center"> CAC40 stocks with RSI below 30. </p>
-    <div>
-    <div> 
-        {% for item in interesting_stocks_cac40 %}
-          <tr>
-            <td>{{item}}</td>
-          </tr>
-        {% endfor %}
-    <div>
-    
-    <div> 
-        <p style="text-align: center"> SBF120 stocks with RSI below 30. </p>
-    <div>
-    <div> 
-        {% for item in interesting_stocks_SBF120 %}
-          <tr>
-            <td>{{item}}</td>
-          </tr>
-        {% endfor %}
-    <div>
-    
+
   </body>
 </html>
     """
+
 html_message += cac40
 html_message += sbf120
 
