@@ -71,35 +71,17 @@ for s in interesting_stocks_cac40:
     cac40 += s
     cac40 += '\n'
 
-sbf120 = "Stocks from the SBF120 with below 30 RSI: \n"
+sbf120 = "\n Stocks from the SBF120 with below 30 RSI: \n"
 for s in interesting_stocks_SBF120:
     sbf120 += s
     sbf120 += '\n'
 # Message to send if HTML is disabled
 
-message_body = f"""\
-    🐶 Woof 🐶
-    {dog_url}
-
-    ❤️ I love you ❤️ 
-    """
+message_body = ""
 message_body += cac40
 message_body += sbf120
 
-html_message = f"""\
-    <!DOCTYPE html>
-<html lang="en">
-  <body style="width: 400px">
-    <p style="font-family: sans-serif; font-size: xx-large; margin-bottom: 30px; text-align: center;">🐶 Woof 🐶</p>
-    <img src="{dog_url}" alt="cute dog" style="border-radius: 6px; width: 100%;" />
-
-    <div> 
-        <p style="text-align: center"> ❤️ I love you ❤️ </p>
-    <div>
-
-  </body>
-</html>
-    """
+html_message = ""
 
 html_message += cac40
 html_message += sbf120
